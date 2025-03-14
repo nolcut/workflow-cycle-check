@@ -62,7 +62,6 @@ faasr_check_workflow_cycle <- function(faasr){
 
   # if there is no functions with no predecessors, then there is a cycle
   if(start == FALSE){
-    #to-do error msg
     err_msg <- paste0('{\"faasr_check_workflow_cycle\":\"function loop found: no initial node\"}', "\n")
     message(err_msg)
     stop()
