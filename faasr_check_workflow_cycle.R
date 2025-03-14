@@ -51,6 +51,7 @@ faasr_check_workflow_cycle <- function(faasr){
   # call faasr_predecessors_list and get a list of function:predecessor pairs
   pre <- faasr_predecessors_list(faasr, adj_graph)
 
+  # finds first function in the graph
   start <- FALSE
   for(func in names(faasr$FunctionList)){
     if(is.null(pre[[func]])){
@@ -58,7 +59,6 @@ faasr_check_workflow_cycle <- function(faasr){
       first_func <- func
     }
   }
-
 
   # if there is no functions with no predecessors, then there is a cycle
   if(start == FALSE){
@@ -77,13 +77,13 @@ faasr_check_workflow_cycle <- function(faasr){
       }
     }
   }
+
   # build an empty recursion call stack
   stack <- list()
   # build an empty visited list
   visited <- list()
-  # do dfs starting with first action
+  # do dfs cycle detection starting with first action
   cycle <- is_cyclic(first_func)
-
   if(cycle == TRUE){
 	    err_msg <- paste0('{\"faasr_check_workflow_cycle\":\"cycle detected in graph\"}', "\n")
 	    message(err_msg)
