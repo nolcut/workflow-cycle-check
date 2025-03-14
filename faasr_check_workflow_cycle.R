@@ -4,7 +4,7 @@ source('faasr_predecessors_list.R')
 faasr_check_workflow_cycle <- function(faasr){
   
   # implement dfs cycle detection - recursive function (returns boolean)
-  is_cyclic <- function(adj_graph, node){
+  is_cyclic <- function(node){
     # if the current action is already in the recursive call stack
     # then there must be a cycle
     if (isTRUE(stack[[node]])) {
@@ -21,7 +21,7 @@ faasr_check_workflow_cycle <- function(faasr){
       for (action in adj_graph[[node]]) {
         # if the successor action creates a cycle
         # then the graph is cyclical
-        if (!(isTRUE(visited[[action]])) && is_cyclic(adj_graph, action)) {
+        if (!(isTRUE(visited[[action]])) && is_cyclic(action)) {
           return(TRUE)
         # if the successor is in the recursion call stack, then
         # there must be a  cycle
@@ -53,7 +53,7 @@ faasr_check_workflow_cycle <- function(faasr){
     for (path in adj_graph[[func]]){
       if (!(path %in% names(faasr$FunctionList))){
         err_msg <- paste0('{\"faasr_check_workflow_cycle\":\"invalid next function ',path,' is found in ',func,'\"}', "\n")
-        # message(err_msg)
+        message(err_msg)
         stop()
       }
     }
@@ -63,11 +63,11 @@ faasr_check_workflow_cycle <- function(faasr){
   # build an empty visited list
   visited <- list()
   # do dfs starting with faasr$FunctionInvoke.
-  cycle <- is_cyclic(adj_graph, faasr$FunctionInvoke)
+  cycle <- is_cyclic(faasr$FunctionInvoke)
 
   if(cycle == TRUE){
 	    err_msg <- paste0('{\"faasr_check_workflow_cycle\":\"cycle detected in graph\"}', "\n")
-	    # message(err_msg)
+	    message(err_msg)
 	    stop()
   }
 	
