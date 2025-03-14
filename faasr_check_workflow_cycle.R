@@ -81,7 +81,7 @@ faasr_check_workflow_cycle <- function(faasr){
   stack <- list()
   # build an empty visited list
   visited <- list()
-  # do dfs starting with faasr$FunctionInvoke.
+  # do dfs starting with first action
   cycle <- is_cyclic(first_func)
 
   if(cycle == TRUE){
