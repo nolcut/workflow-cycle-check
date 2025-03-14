@@ -48,6 +48,26 @@ faasr_check_workflow_cycle <- function(faasr){
     }
   }
 
+  # call faasr_predecessors_list and get a list of function:predecessor pairs
+  pre <- faasr_predecessors_list(faasr, adj_graph)
+
+  start <- FALSE
+  for(func in names(faasr$FunctionList)){
+    if(is.null(pre[[func]])){
+      start <- TRUE
+      first_func <- func
+    }
+  }
+
+
+  # if there is no functions with no predecessors, then there is a cycle
+  if(start == FALSE){
+    #to-do error msg
+    err_msg <- paste0('{\"faasr_check_workflow_cycle\":\"function loop found: no initial node\"}', "\n")
+    message(err_msg)
+    stop()
+  }
+
   # check next functions of FunctionInvoke are in the function list
   for (func in names(adj_graph)){
     for (path in adj_graph[[func]]){
@@ -63,7 +83,7 @@ faasr_check_workflow_cycle <- function(faasr){
   # build an empty visited list
   visited <- list()
   # do dfs starting with faasr$FunctionInvoke.
-  cycle <- is_cyclic(faasr$FunctionInvoke)
+  cycle <- is_cyclic(first_func)
 
   if(cycle == TRUE){
 	    err_msg <- paste0('{\"faasr_check_workflow_cycle\":\"cycle detected in graph\"}', "\n")
@@ -71,12 +91,9 @@ faasr_check_workflow_cycle <- function(faasr){
 	    stop()
   }
 	
-  # call faasr_predecessors_list and get a list of function:predecessor sets.
-  pre <- faasr_predecessors_list(faasr, adj_graph)
 
   # check for unreachable functions
   check <- TRUE
-  message(names(visited))
   for (func in names(faasr$FunctionList)){
     if(!(func %in% names(visited))){
       err_msg <- paste0('{\"faasr_check_workflow_cycle\":\"unreachable action: ',func,'\"}', "\n")
