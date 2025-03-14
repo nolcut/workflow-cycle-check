@@ -1,6 +1,6 @@
 source('faasr_predecessors_list.R')
 
-# workflow implementation - check loop iteratively, predecessors.
+# check workflows for cycle. Returns predecessor list
 faasr_check_workflow_cycle <- function(faasr){
   
   # implement dfs cycle detection - recursive function (returns boolean)
@@ -35,7 +35,7 @@ faasr_check_workflow_cycle <- function(faasr){
     return(FALSE)
   }
 	
-  # build empty lists for the graph and predecessors.
+  # build empty lists for the graph
   adj_graph <- list()
 
   # build the graph indicating adjacent nodes, e.g., "F1":["F2","F3"], so on.
@@ -101,6 +101,6 @@ faasr_check_workflow_cycle <- function(faasr){
       stop()
     }
   }
-	
+	# return predecessor list for current action
   return(pre[[faasr$FunctionInvoke]])
 }
