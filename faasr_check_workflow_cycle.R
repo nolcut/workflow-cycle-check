@@ -5,6 +5,14 @@ faasr_check_workflow_cycle <- function(faasr){
   
   # implement dfs cycle detection - recursive function (returns boolean)
   is_cyclic <- function(node){
+
+    # check that current action is in function list
+    if (!(node %in% names(faasr$FunctionList))){
+      err_msg <- paste0('{\"faasr_check_workflow_cycle\":\"invalid function trigger: ',node,'\"}', "\n")
+      message(err_msg)
+      stop()
+      }
+
     # if the current action is already in the recursive call stack
     # then there must be a cycle
     if (isTRUE(stack[[node]])) {
@@ -67,16 +75,6 @@ faasr_check_workflow_cycle <- function(faasr){
     stop()
   }
 
-  # check next functions of FunctionInvoke are in the function list
-  for (func in names(adj_graph)){
-    for (path in adj_graph[[func]]){
-      if (!(path %in% names(faasr$FunctionList))){
-        err_msg <- paste0('{\"faasr_check_workflow_cycle\":\"invalid next function ',path,' is found in ',func,'\"}', "\n")
-        message(err_msg)
-        stop()
-      }
-    }
-  }
 
   # build an empty recursion call stack
   stack <- list()
