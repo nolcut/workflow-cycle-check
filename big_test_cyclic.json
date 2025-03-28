@@ -1,0 +1,2488 @@
+{
+    "ComputeServers": {
+        "My_OW_Account": {
+            "FaaSType": "OpenWhisk",
+            "SSL": "False",
+            "Namespace": "YOUR_OW_USERNAME",
+            "Endpoint": "YOUR_OW_ENDPOINT"
+        }
+    },
+    "DataStores": {
+        "My_Minio_Bucket": {
+            "Endpoint": "https://play.min.io",
+            "Bucket": "faasr",
+            "Region": "us-east-1",
+            "Writable": "TRUE"
+        }
+    },
+    "FunctionList": {
+        "split_fasta_ID000001": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 2.836696,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "large.fasta",
+                    "split_fasta"
+                ],
+                "input_size_in_bytes": 201390,
+                "output_size_in_bytes": 201391,
+                "actionid": "split_fasta_ID000001"
+            },
+            "InvokeNext": [
+                "blastall_ID000002",
+                "blastall_ID000003",
+                "blastall_ID000004",
+                "blastall_ID000005",
+                "blastall_ID000006",
+                "blastall_ID000007",
+                "blastall_ID000008",
+                "blastall_ID000009",
+                "blastall_ID000010",
+                "blastall_ID000011",
+                "blastall_ID000012",
+                "blastall_ID000013",
+                "blastall_ID000014",
+                "blastall_ID000015",
+                "blastall_ID000016",
+                "blastall_ID000017",
+                "blastall_ID000018",
+                "blastall_ID000019",
+                "blastall_ID000020",
+                "blastall_ID000021",
+                "blastall_ID000022",
+                "blastall_ID000023",
+                "blastall_ID000024",
+                "blastall_ID000025",
+                "blastall_ID000026",
+                "blastall_ID000027",
+                "blastall_ID000028",
+                "blastall_ID000029",
+                "blastall_ID000030",
+                "blastall_ID000031",
+                "blastall_ID000032",
+                "blastall_ID000033",
+                "blastall_ID000034",
+                "blastall_ID000035",
+                "blastall_ID000036",
+                "blastall_ID000037",
+                "blastall_ID000038",
+                "blastall_ID000039",
+                "blastall_ID000040",
+                "blastall_ID000041",
+                "blastall_ID000042",
+                "blastall_ID000043",
+                "blastall_ID000044",
+                "blastall_ID000045",
+                "blastall_ID000046",
+                "blastall_ID000047",
+                "blastall_ID000048",
+                "blastall_ID000049",
+                "blastall_ID000050",
+                "blastall_ID000051",
+                "blastall_ID000052",
+                "blastall_ID000053",
+                "blastall_ID000054",
+                "blastall_ID000055",
+                "blastall_ID000056",
+                "blastall_ID000057",
+                "blastall_ID000058",
+                "blastall_ID000059",
+                "blastall_ID000060",
+                "blastall_ID000061",
+                "blastall_ID000062",
+                "blastall_ID000063",
+                "blastall_ID000064",
+                "blastall_ID000065",
+                "blastall_ID000066",
+                "blastall_ID000067",
+                "blastall_ID000068",
+                "blastall_ID000069",
+                "blastall_ID000070",
+                "blastall_ID000071",
+                "blastall_ID000072",
+                "blastall_ID000073",
+                "blastall_ID000074",
+                "blastall_ID000075",
+                "blastall_ID000076",
+                "blastall_ID000077",
+                "blastall_ID000078",
+                "blastall_ID000079",
+                "blastall_ID000080",
+                "blastall_ID000081",
+                "blastall_ID000082",
+                "blastall_ID000083",
+                "blastall_ID000084",
+                "blastall_ID000085",
+                "blastall_ID000086",
+                "blastall_ID000087",
+                "blastall_ID000088",
+                "blastall_ID000089",
+                "blastall_ID000090",
+                "blastall_ID000091",
+                "blastall_ID000092",
+                "blastall_ID000093",
+                "blastall_ID000094",
+                "blastall_ID000095",
+                "blastall_ID000096",
+                "blastall_ID000097",
+                "blastall_ID000098",
+                "blastall_ID000099",
+                "blastall_ID000100",
+                "blastall_ID000101"
+            ]
+        },
+        "blastall_ID000002": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1399.555824,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.0",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9700,
+                "output_size_in_bytes": 5746,
+                "actionid": "blastall_ID000002"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000003": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1359.003272,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.1",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9701,
+                "output_size_in_bytes": 5840,
+                "actionid": "blastall_ID000003"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000004": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1363.470638,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.2",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9701,
+                "output_size_in_bytes": 5834,
+                "actionid": "blastall_ID000004"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000005": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1452.286074,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.3",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9701,
+                "output_size_in_bytes": 5950,
+                "actionid": "blastall_ID000005"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000006": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1297.512495,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.4",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9701,
+                "output_size_in_bytes": 6096,
+                "actionid": "blastall_ID000006"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000007": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1455.929362,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.5",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9701,
+                "output_size_in_bytes": 5939,
+                "actionid": "blastall_ID000007"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000008": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1411.772565,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.6",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9701,
+                "output_size_in_bytes": 6096,
+                "actionid": "blastall_ID000008"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000009": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1469.3402,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.7",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9701,
+                "output_size_in_bytes": 5862,
+                "actionid": "blastall_ID000009"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000010": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1504.655015,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.8",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9701,
+                "output_size_in_bytes": 5475,
+                "actionid": "blastall_ID000010"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000011": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1447.936469,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.9",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6033,
+                "actionid": "blastall_ID000011"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000012": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1429.952045,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.10",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5703,
+                "actionid": "blastall_ID000012"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000013": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1357.770797,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.11",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5825,
+                "actionid": "blastall_ID000013"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000014": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1470.414256,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.12",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6149,
+                "actionid": "blastall_ID000014"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000015": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1546.61071,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.13",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5996,
+                "actionid": "blastall_ID000015"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000016": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1542.592562,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.14",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6651,
+                "actionid": "blastall_ID000016"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000017": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1508.515855,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.15",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6142,
+                "actionid": "blastall_ID000017"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000018": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1499.530774,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.16",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5731,
+                "actionid": "blastall_ID000018"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000019": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1397.312676,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.17",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5456,
+                "actionid": "blastall_ID000019"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000020": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1524.221314,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.18",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5764,
+                "actionid": "blastall_ID000020"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000021": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1501.791902,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.19",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5978,
+                "actionid": "blastall_ID000021"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000022": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1331.933204,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.20",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6238,
+                "actionid": "blastall_ID000022"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000023": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1387.63316,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.21",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6025,
+                "actionid": "blastall_ID000023"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000024": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1428.848688,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.22",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6358,
+                "actionid": "blastall_ID000024"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000025": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1383.091632,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.23",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6579,
+                "actionid": "blastall_ID000025"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000026": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1515.944662,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.24",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5530,
+                "actionid": "blastall_ID000026"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000027": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1272.929996,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.25",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5632,
+                "actionid": "blastall_ID000027"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000028": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1194.694903,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.26",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5984,
+                "actionid": "blastall_ID000028"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000029": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1409.697459,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.27",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6063,
+                "actionid": "blastall_ID000029"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000030": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1361.226014,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.28",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5977,
+                "actionid": "blastall_ID000030"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000031": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1473.519761,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.29",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5642,
+                "actionid": "blastall_ID000031"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000032": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1412.504853,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.30",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6031,
+                "actionid": "blastall_ID000032"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000033": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1494.805284,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.31",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5638,
+                "actionid": "blastall_ID000033"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000034": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1357.555986,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.32",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5656,
+                "actionid": "blastall_ID000034"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000035": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1421.170592,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.33",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5565,
+                "actionid": "blastall_ID000035"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000036": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1366.014155,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.34",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5677,
+                "actionid": "blastall_ID000036"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000037": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1352.482306,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.35",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5832,
+                "actionid": "blastall_ID000037"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000038": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1426.40827,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.36",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6817,
+                "actionid": "blastall_ID000038"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000039": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1407.788715,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.37",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6013,
+                "actionid": "blastall_ID000039"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000040": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1431.649218,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.38",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6089,
+                "actionid": "blastall_ID000040"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000041": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1373.279347,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.39",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6278,
+                "actionid": "blastall_ID000041"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000042": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1368.182179,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.40",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5604,
+                "actionid": "blastall_ID000042"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000043": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1111.806158,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.41",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5639,
+                "actionid": "blastall_ID000043"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000044": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1114.906074,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.42",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6166,
+                "actionid": "blastall_ID000044"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000045": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1101.951393,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.43",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5461,
+                "actionid": "blastall_ID000045"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000046": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1112.422694,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.44",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6100,
+                "actionid": "blastall_ID000046"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000047": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1114.846455,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.45",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6279,
+                "actionid": "blastall_ID000047"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000048": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1107.378629,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.46",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5408,
+                "actionid": "blastall_ID000048"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000049": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1123.420792,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.47",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5938,
+                "actionid": "blastall_ID000049"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000050": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1123.801095,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.48",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6147,
+                "actionid": "blastall_ID000050"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000051": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1126.980695,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.49",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6236,
+                "actionid": "blastall_ID000051"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000052": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1114.010417,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.50",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6103,
+                "actionid": "blastall_ID000052"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000053": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1118.18214,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.51",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5889,
+                "actionid": "blastall_ID000053"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000054": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1129.426125,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.52",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5960,
+                "actionid": "blastall_ID000054"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000055": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1121.583854,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.53",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6618,
+                "actionid": "blastall_ID000055"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000056": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1138.738559,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.54",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6497,
+                "actionid": "blastall_ID000056"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000057": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1117.643609,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.55",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5360,
+                "actionid": "blastall_ID000057"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000058": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1095.071645,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.56",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6462,
+                "actionid": "blastall_ID000058"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000059": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1121.656332,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.57",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5498,
+                "actionid": "blastall_ID000059"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000060": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1489.717042,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.58",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5954,
+                "actionid": "blastall_ID000060"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000061": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1511.375804,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.59",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6053,
+                "actionid": "blastall_ID000061"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000062": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1452.546599,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.60",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5876,
+                "actionid": "blastall_ID000062"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000063": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1560.095377,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.61",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6457,
+                "actionid": "blastall_ID000063"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000064": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1629.981294,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.62",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5651,
+                "actionid": "blastall_ID000064"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000065": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1575.371714,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.63",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5431,
+                "actionid": "blastall_ID000065"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000066": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1596.382342,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.64",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5978,
+                "actionid": "blastall_ID000066"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000067": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1553.287345,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.65",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6217,
+                "actionid": "blastall_ID000067"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000068": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1574.67014,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.66",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6277,
+                "actionid": "blastall_ID000068"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000069": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1617.364823,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.67",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5614,
+                "actionid": "blastall_ID000069"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000070": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1672.803213,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.68",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6115,
+                "actionid": "blastall_ID000070"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000071": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1627.648781,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.69",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5687,
+                "actionid": "blastall_ID000071"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000072": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1499.742395,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.70",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5633,
+                "actionid": "blastall_ID000072"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000073": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1678.848481,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.71",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5906,
+                "actionid": "blastall_ID000073"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000074": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1548.915294,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.72",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6475,
+                "actionid": "blastall_ID000074"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000075": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1590.239315,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.73",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6200,
+                "actionid": "blastall_ID000075"
+            },
+            "InvokeNext": [
+                "split_fasta_ID000001",
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000076": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1624.177946,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.74",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5632,
+                "actionid": "blastall_ID000076"
+            },
+            "InvokeNext": [
+                "blastall_ID000075",
+                "blastall_ID000077",
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000077": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1504.726261,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.75",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6001,
+                "actionid": "blastall_ID000077"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000078": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1664.467483,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.76",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5808,
+                "actionid": "blastall_ID000078"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000079": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1636.046455,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.77",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5400,
+                "actionid": "blastall_ID000079"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000080": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1665.952207,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.78",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5527,
+                "actionid": "blastall_ID000080"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000081": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1683.951555,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.79",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5911,
+                "actionid": "blastall_ID000081"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000082": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1420.428807,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.80",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5665,
+                "actionid": "blastall_ID000082"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000083": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1537.283178,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.81",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5864,
+                "actionid": "blastall_ID000083"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000084": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1531.1953,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.82",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5924,
+                "actionid": "blastall_ID000084"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000085": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1625.050265,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.83",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5650,
+                "actionid": "blastall_ID000085"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000086": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1631.526908,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.84",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6018,
+                "actionid": "blastall_ID000086"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000087": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1680.377228,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.85",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5494,
+                "actionid": "blastall_ID000087"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000088": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1595.365918,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.86",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5942,
+                "actionid": "blastall_ID000088"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000089": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1748.692633,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.87",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5517,
+                "actionid": "blastall_ID000089"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000090": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1277.727572,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.88",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6120,
+                "actionid": "blastall_ID000090"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000091": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1358.025171,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.89",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6402,
+                "actionid": "blastall_ID000091"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000092": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1619.746916,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.90",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5700,
+                "actionid": "blastall_ID000092"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000093": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1512.89452,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.91",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6709,
+                "actionid": "blastall_ID000093"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000094": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1696.067265,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.92",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5988,
+                "actionid": "blastall_ID000094"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000095": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1630.857406,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.93",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6703,
+                "actionid": "blastall_ID000095"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000096": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1468.304167,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.94",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5583,
+                "actionid": "blastall_ID000096"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000097": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1295.435533,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.95",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5768,
+                "actionid": "blastall_ID000097"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000098": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1392.687438,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.96",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 6951,
+                "actionid": "blastall_ID000098"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000099": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1553.481921,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.97",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5799,
+                "actionid": "blastall_ID000099"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000100": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1648.662759,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.98",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9702,
+                "output_size_in_bytes": 5798,
+                "actionid": "blastall_ID000100"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "blastall_ID000101": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 1489.991095,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "blastall",
+                    "large.fasta.99",
+                    "nt"
+                ],
+                "input_size_in_bytes": 9703,
+                "output_size_in_bytes": 6130,
+                "actionid": "blastall_ID000101"
+            },
+            "InvokeNext": [
+                "cat_blast_ID000102",
+                "cat_ID000103"
+            ]
+        },
+        "cat_blast_ID000102": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 15.936892,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "cat_blast",
+                    "large.fasta.0.out",
+                    "large.fasta.1.out",
+                    "large.fasta.2.out",
+                    "large.fasta.3.out",
+                    "large.fasta.4.out",
+                    "large.fasta.5.out",
+                    "large.fasta.6.out",
+                    "large.fasta.7.out",
+                    "large.fasta.8.out",
+                    "large.fasta.9.out",
+                    "large.fasta.10.out",
+                    "large.fasta.11.out",
+                    "large.fasta.12.out",
+                    "large.fasta.13.out",
+                    "large.fasta.14.out",
+                    "large.fasta.15.out",
+                    "large.fasta.16.out",
+                    "large.fasta.17.out",
+                    "large.fasta.18.out",
+                    "large.fasta.19.out",
+                    "large.fasta.20.out",
+                    "large.fasta.21.out",
+                    "large.fasta.22.out",
+                    "large.fasta.23.out",
+                    "large.fasta.24.out",
+                    "large.fasta.25.out",
+                    "large.fasta.26.out",
+                    "large.fasta.27.out",
+                    "large.fasta.28.out",
+                    "large.fasta.29.out",
+                    "large.fasta.30.out",
+                    "large.fasta.31.out",
+                    "large.fasta.32.out",
+                    "large.fasta.33.out",
+                    "large.fasta.34.out",
+                    "large.fasta.35.out",
+                    "large.fasta.36.out",
+                    "large.fasta.37.out",
+                    "large.fasta.38.out",
+                    "large.fasta.39.out",
+                    "large.fasta.40.out",
+                    "large.fasta.41.out",
+                    "large.fasta.42.out",
+                    "large.fasta.43.out",
+                    "large.fasta.44.out",
+                    "large.fasta.45.out",
+                    "large.fasta.46.out",
+                    "large.fasta.47.out",
+                    "large.fasta.48.out",
+                    "large.fasta.49.out",
+                    "large.fasta.50.out",
+                    "large.fasta.51.out",
+                    "large.fasta.52.out",
+                    "large.fasta.53.out",
+                    "large.fasta.54.out",
+                    "large.fasta.55.out",
+                    "large.fasta.56.out",
+                    "large.fasta.57.out",
+                    "large.fasta.58.out",
+                    "large.fasta.59.out",
+                    "large.fasta.60.out",
+                    "large.fasta.61.out",
+                    "large.fasta.62.out",
+                    "large.fasta.63.out",
+                    "large.fasta.64.out",
+                    "large.fasta.65.out",
+                    "large.fasta.66.out",
+                    "large.fasta.67.out",
+                    "large.fasta.68.out",
+                    "large.fasta.69.out",
+                    "large.fasta.70.out",
+                    "large.fasta.71.out",
+                    "large.fasta.72.out",
+                    "large.fasta.73.out",
+                    "large.fasta.74.out",
+                    "large.fasta.75.out",
+                    "large.fasta.76.out",
+                    "large.fasta.77.out",
+                    "large.fasta.78.out",
+                    "large.fasta.79.out",
+                    "large.fasta.80.out",
+                    "large.fasta.81.out",
+                    "large.fasta.82.out",
+                    "large.fasta.83.out",
+                    "large.fasta.84.out",
+                    "large.fasta.85.out",
+                    "large.fasta.86.out",
+                    "large.fasta.87.out",
+                    "large.fasta.88.out",
+                    "large.fasta.89.out",
+                    "large.fasta.90.out",
+                    "large.fasta.91.out",
+                    "large.fasta.92.out",
+                    "large.fasta.93.out",
+                    "large.fasta.94.out",
+                    "large.fasta.95.out",
+                    "large.fasta.96.out",
+                    "large.fasta.97.out",
+                    "large.fasta.98.out",
+                    "large.fasta.99.out"
+                ],
+                "input_size_in_bytes": 594784,
+                "output_size_in_bytes": 565630,
+                "actionid": "cat_blast_ID000102"
+            },
+            "InvokeNext": []
+        },
+        "cat_ID000103": {
+            "FunctionName": "synthetic_faas_function",
+            "FaaSServer": "My_OW_Account",
+            "Arguments": {
+                "execution_time": 0.012734,
+                "folder": "synthetic_files",
+                "input_files": [
+                    "large.fasta.0.err",
+                    "large.fasta.1.err",
+                    "large.fasta.2.err",
+                    "large.fasta.3.err",
+                    "large.fasta.4.err",
+                    "large.fasta.5.err",
+                    "large.fasta.6.err",
+                    "large.fasta.7.err",
+                    "large.fasta.8.err",
+                    "large.fasta.9.err",
+                    "large.fasta.10.err",
+                    "large.fasta.11.err",
+                    "large.fasta.12.err",
+                    "large.fasta.13.err",
+                    "large.fasta.14.err",
+                    "large.fasta.15.err",
+                    "large.fasta.16.err",
+                    "large.fasta.17.err",
+                    "large.fasta.18.err",
+                    "large.fasta.19.err",
+                    "large.fasta.20.err",
+                    "large.fasta.21.err",
+                    "large.fasta.22.err",
+                    "large.fasta.23.err",
+                    "large.fasta.24.err",
+                    "large.fasta.25.err",
+                    "large.fasta.26.err",
+                    "large.fasta.27.err",
+                    "large.fasta.28.err",
+                    "large.fasta.29.err",
+                    "large.fasta.30.err",
+                    "large.fasta.31.err",
+                    "large.fasta.32.err",
+                    "large.fasta.33.err",
+                    "large.fasta.34.err",
+                    "large.fasta.35.err",
+                    "large.fasta.36.err",
+                    "large.fasta.37.err",
+                    "large.fasta.38.err",
+                    "large.fasta.39.err",
+                    "large.fasta.40.err",
+                    "large.fasta.41.err",
+                    "large.fasta.42.err",
+                    "large.fasta.43.err",
+                    "large.fasta.44.err",
+                    "large.fasta.45.err",
+                    "large.fasta.46.err",
+                    "large.fasta.47.err",
+                    "large.fasta.48.err",
+                    "large.fasta.49.err",
+                    "large.fasta.50.err",
+                    "large.fasta.51.err",
+                    "large.fasta.52.err",
+                    "large.fasta.53.err",
+                    "large.fasta.54.err",
+                    "large.fasta.55.err",
+                    "large.fasta.56.err",
+                    "large.fasta.57.err",
+                    "large.fasta.58.err",
+                    "large.fasta.59.err",
+                    "large.fasta.60.err",
+                    "large.fasta.61.err",
+                    "large.fasta.62.err",
+                    "large.fasta.63.err",
+                    "large.fasta.64.err",
+                    "large.fasta.65.err",
+                    "large.fasta.66.err",
+                    "large.fasta.67.err",
+                    "large.fasta.68.err",
+                    "large.fasta.69.err",
+                    "large.fasta.70.err",
+                    "large.fasta.71.err",
+                    "large.fasta.72.err",
+                    "large.fasta.73.err",
+                    "large.fasta.74.err",
+                    "large.fasta.75.err",
+                    "large.fasta.76.err",
+                    "large.fasta.77.err",
+                    "large.fasta.78.err",
+                    "large.fasta.79.err",
+                    "large.fasta.80.err",
+                    "large.fasta.81.err",
+                    "large.fasta.82.err",
+                    "large.fasta.83.err",
+                    "large.fasta.84.err",
+                    "large.fasta.85.err",
+                    "large.fasta.86.err",
+                    "large.fasta.87.err",
+                    "large.fasta.88.err",
+                    "large.fasta.89.err",
+                    "large.fasta.90.err",
+                    "large.fasta.91.err",
+                    "large.fasta.92.err",
+                    "large.fasta.93.err",
+                    "large.fasta.94.err",
+                    "large.fasta.95.err",
+                    "large.fasta.96.err",
+                    "large.fasta.97.err",
+                    "large.fasta.98.err",
+                    "large.fasta.99.err"
+                ],
+                "input_size_in_bytes": 0,
+                "output_size_in_bytes": 0,
+                "actionid": "cat_ID000103"
+            },
+            "InvokeNext": []
+        }
+    },
+    "ActionContainers": {
+        "split_fasta_ID000001": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000002": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000003": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000004": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000005": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000006": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000007": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000008": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000009": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000010": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000011": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000012": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000013": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000014": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000015": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000016": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000017": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000018": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000019": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000020": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000021": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000022": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000023": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000024": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000025": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000026": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000027": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000028": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000029": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000030": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000031": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000032": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000033": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000034": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000035": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000036": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000037": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000038": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000039": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000040": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000041": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000042": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000043": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000044": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000045": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000046": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000047": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000048": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000049": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000050": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000051": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000052": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000053": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000054": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000055": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000056": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000057": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000058": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000059": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000060": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000061": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000062": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000063": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000064": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000065": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000066": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000067": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000068": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000069": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000070": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000071": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000072": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000073": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000074": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000075": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000076": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000077": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000078": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000079": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000080": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000081": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000082": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000083": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000084": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000085": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000086": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000087": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000088": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000089": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000090": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000091": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000092": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000093": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000094": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000095": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000096": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000097": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000098": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000099": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000100": "faasr/openwhisk-tidyverse:latest",
+        "blastall_ID000101": "faasr/openwhisk-tidyverse:latest",
+        "cat_blast_ID000102": "faasr/openwhisk-tidyverse:latest",
+        "cat_ID000103": "faasr/openwhisk-tidyverse:latest"
+    },
+    "FunctionGitRepo": {
+        "synthetic_faas_function": "nolcut/FaaSr-synthetic"
+    },
+    "FunctionInvoke": "split_fasta_ID000001",
+    "InvocationID": "",
+    "FaaSrLog": "FaaSrLog",
+    "LoggingDataStore": "My_Minio_Bucket",
+    "DefaultDataStore": "My_Minio_Bucket",
+    "FunctionCRANPackage": {
+        "synthetic_faas_function": []
+    },
+    "FunctionGitHubPackage": {
+        "synthetic_faas_function": []
+    }
+}
